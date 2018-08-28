@@ -53,6 +53,7 @@ CREATE TABLE Alerta (
 
 CREATE TABLE Registro_Incidencias (
 	id_registro SERIAL PRIMARY KEY,
+	id_alerta varchar(6) REFERENCES Alerta(id_alerta),
 	id_usuario INT REFERENCES Usuarios(id_usuario),
 	id_placa INT REFERENCES Policia(id_placa),
 	fecha date,
